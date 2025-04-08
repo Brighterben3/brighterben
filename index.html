@@ -3,675 +3,733 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrighterBen's Portfolio & Marketplace</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
-    <style>
-        :root {
-            --primary-color: #0d6efd;
-            --secondary-color: #6c757d;
-            --success-color: #198754;
-            --danger-color: #dc3545;
-            --warning-color: #ffc107;
-            --dark-color: #212529;
-            --light-color: #f8f9fa;
-        }
-        
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--light-color);
-            color: var(--dark-color);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-        
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color), #0b5ed7);
-            color: white;
-            padding: 5rem 0;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-        
-        .contact-info .bi {
-            font-size: 1.2rem;
-            margin-right: 0.5rem;
-            color: var(--primary-color);
-        }
-        
-        .footer {
-            background-color: var(--dark-color);
-            color: white;
-            margin-top: auto;
-        }
-        
-        .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            transition: transform 0.3s;
-        }
-        
-        .social-icons a:hover {
-            color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-        
-        /* Marketplace Styles */
-        .product-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .badge-tag {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        
-        .transaction-table th {
-            white-space: nowrap;
-        }
-        
-        .profit {
-            color: var(--success-color);
-        }
-        
-        .loss {
-            color: var(--danger-color);
-        }
-        
-        .dashboard-card {
-            border-left: 4px solid;
-            transition: all 0.3s;
-        }
-        
-        .dashboard-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .card-sales {
-            border-left-color: var(--success-color);
-        }
-        
-        .card-purchases {
-            border-left-color: var(--primary-color);
-        }
-        
-        .card-profit {
-            border-left-color: var(--warning-color);
-        }
-        
-        .card-inventory {
-            border-left-color: var(--secondary-color);
-        }
-    </style>
+    <title>Benjamin Masero | Digital Designer & Creative Strategist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <header class="header">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="bi bi-code-slash me-2"></i>BrighterBen
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Benjamin Masero Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="bi bi-house-door me-1"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about"><i class="bi bi-person me-1"></i> About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#marketplace"><i class="bi bi-shop me-1"></i> Marketplace</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#transactions"><i class="bi bi-arrow-left-right me-1"></i> Transactions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i> Contact</a>
-                    </li>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Thoughts</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </nav>
+            <div class="social-nav">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold mb-3">BrighterBen's Portfolio & Marketplace</h1>
-            <p class="lead">Innovative solutions and digital marketplace</p>
-            <div class="d-flex gap-3 justify-content-center mt-4">
-                <a href="#marketplace" class="btn btn-light btn-lg">
-                    <i class="bi bi-shop me-2"></i>Browse Marketplace
-                </a>
-                <a href="#transactions" class="btn btn-outline-light btn-lg">
-                    <i class="bi bi-graph-up me-2"></i>View Transactions
-                </a>
-            </div>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mb-5">
-        <!-- About Section -->
-        <section id="about" class="mb-5 py-4">
-            <h2 class="section-title">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <p class="lead">Hello! I'm BrighterBen, a passionate developer who loves creating innovative solutions.</p>
-                    <p>I specialize in full-stack web development with expertise in both front-end and back-end technologies. This portfolio includes a demonstration marketplace with complete transaction tracking.</p>
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <h5><i class="bi bi-check-circle-fill text-primary me-2"></i>Development Skills</h5>
-                            <p>HTML5, CSS3, JavaScript, React, Node.js, MongoDB</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h5><i class="bi bi-check-circle-fill text-primary me-2"></i>Business Features</h5>
-                            <p>E-commerce, Transaction Tracking, Profit/Loss Analysis</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <img src="https://via.placeholder.com/300" alt="Profile" class="img-fluid rounded-circle shadow" style="max-width: 250px;">
-                </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Benjamin Masero</h1>
+                <h2>Digital Designer & Creative Strategist</h2>
+                <p>I create meaningful digital experiences that connect brands with their audiences through thoughtful design and strategic thinking.</p>
+                <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+                <a href="contact.html" class="btn btn-secondary">Let's Collaborate</a>
             </div>
-        </section>
-
-        <!-- Marketplace Section -->
-        <section id="marketplace" class="mb-5 py-4">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="section-title mb-0">Marketplace</h2>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
-                    <i class="bi bi-plus-circle me-1"></i>Add Product
-                </button>
-            </div>
-            
-            <div class="row g-4">
-                <!-- Product Cards -->
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card product-card">
-                        <span class="badge bg-success badge-tag">In Stock</span>
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Development Course</h5>
-                            <p class="card-text">Comprehensive full-stack web development program with projects.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 text-success">$99.99</span>
-                                <div>
-                                    <button class="btn btn-sm btn-outline-primary me-1">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-primary">
-                                        <i class="bi bi-cart-plus"></i> Buy
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card product-card">
-                        <span class="badge bg-warning text-dark badge-tag">Limited</span>
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product">
-                        <div class="card-body">
-                            <h5 class="card-title">UI/UX Design Template</h5>
-                            <p class="card-text">Premium design templates for your next project.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 text-success">$49.99</span>
-                                <div>
-                                    <button class="btn btn-sm btn-outline-primary me-1">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-primary">
-                                        <i class="bi bi-cart-plus"></i> Buy
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card product-card">
-                        <span class="badge bg-danger badge-tag">Sold Out</span>
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product">
-                        <div class="card-body">
-                            <h5 class="card-title">JavaScript E-book</h5>
-                            <p class="card-text">Master JavaScript with this comprehensive guide.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 text-success">$29.99</span>
-                                <div>
-                                    <button class="btn btn-sm btn-outline-primary me-1">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-primary" disabled>
-                                        <i class="bi bi-cart-plus"></i> Buy
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card product-card">
-                        <span class="badge bg-success badge-tag">New</span>
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product">
-                        <div class="card-body">
-                            <h5 class="card-title">API Development Kit</h5>
-                            <p class="card-text">Everything you need to build robust APIs.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="h5 text-success">$79.99</span>
-                                <div>
-                                    <button class="btn btn-sm btn-outline-primary me-1">
-                                        <i class="bi bi-eye"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-primary">
-                                        <i class="bi bi-cart-plus"></i> Buy
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Transactions Dashboard -->
-        <section id="transactions" class="mb-5 py-4">
-            <h2 class="section-title">Transactions Dashboard</h2>
-            
-            <div class="row mb-4 g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card dashboard-card card-sales h-100">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6 class="text-muted">Total Sales</h6>
-                                    <h3>$2,450</h3>
-                                </div>
-                                <div class="bg-success bg-opacity-10 p-3 rounded">
-                                    <i class="bi bi-currency-dollar text-success" style="font-size: 1.5rem;"></i>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <span class="badge bg-success">+12%</span> from last month
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="card dashboard-card card-purchases h-100">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6 class="text-muted">Total Purchases</h6>
-                                    <h3>$1,200</h3>
-                                </div>
-                                <div class="bg-primary bg-opacity-10 p-3 rounded">
-                                    <i class="bi bi-cart text-primary" style="font-size: 1.5rem;"></i>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <span class="badge bg-danger">-5%</span> from last month
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="card dashboard-card card-profit h-100">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6 class="text-muted">Net Profit</h6>
-                                    <h3>$1,250</h3>
-                                </div>
-                                <div class="bg-warning bg-opacity-10 p-3 rounded">
-                                    <i class="bi bi-graph-up text-warning" style="font-size: 1.5rem;"></i>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <span class="badge bg-success">+22%</span> from last month
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="card dashboard-card card-inventory h-100">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6 class="text-muted">Inventory</h6>
-                                    <h3>24 Items</h3>
-                                </div>
-                                <div class="bg-secondary bg-opacity-10 p-3 rounded">
-                                    <i class="bi bi-box-seam text-secondary" style="font-size: 1.5rem;"></i>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <span class="badge bg-success">+3</span> new items
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card shadow-sm">
-                <div class="card-header bg-white">
-                    <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#sales" data-bs-toggle="tab">Sales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#purchases" data-bs-toggle="tab">Purchases</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#profit" data-bs-toggle="tab">Profit Analysis</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="sales">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Product</th>
-                                            <th>Customer</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>#1001</td>
-                                            <td>Web Development Course</td>
-                                            <td>John Smith</td>
-                                            <td>2025-06-15</td>
-                                            <td>$99.99</td>
-                                            <td><span class="badge bg-success">Completed</span></td>
-                                            <td>
-                                                <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="bi bi-receipt"></i> Invoice
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>#1002</td>
-                                            <td>UI/UX Design Template</td>
-                                            <td>Sarah Johnson</td>
-                                            <td>2025-06-14</td>
-                                            <td>$49.99</td>
-                                            <td><span class="badge bg-success">Completed</span></td>
-                                            <td>
-                                                <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="bi bi-receipt"></i> Invoice
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>#1003</td>
-                                            <td>API Development Kit</td>
-                                            <td>Michael Brown</td>
-                                            <td>2025-06-12</td>
-                                            <td>$79.99</td>
-                                            <td><span class="badge bg-warning text-dark">Pending</span></td>
-                                            <td>
-                                                <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="bi bi-receipt"></i> Invoice
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-pane fade" id="purchases">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Product</th>
-                                            <th>Supplier</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>#2001</td>
-                                            <td>Web Hosting</td>
-                                            <td>Hosting Provider Inc.</td>
-                                            <td>2025-06-10</td>
-                                            <td>$120.00</td>
-                                            <td><span class="badge bg-success">Completed</span></td>
-                                            <td>
-                                                <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="bi bi-receipt"></i> Receipt
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>#2002</td>
-                                            <td>Design Assets</td>
-                                            <td>Creative Market</td>
-                                            <td>2025-06-05</td>
-                                            <td>$85.50</td>
-                                            <td><span class="badge bg-success">Completed</span></td>
-                                            <td>
-                                                <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="bi bi-receipt"></i> Receipt
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-pane fade" id="profit">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>Product</th>
-                                            <th>Sold</th>
-                                            <th>Revenue</th>
-                                            <th>Cost</th>
-                                            <th>Profit</th>
-                                            <th>Margin</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Web Development Course</td>
-                                            <td>15</td>
-                                            <td>$1,499.85</td>
-                                            <td>$300.00</td>
-                                            <td class="profit">+$1,199.85</td>
-                                            <td class="profit">80%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>UI/UX Design Template</td>
-                                            <td>8</td>
-                                            <td>$399.92</td>
-                                            <td>$160.00</td>
-                                            <td class="profit">+$239.92</td>
-                                            <td class="profit">60%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>API Development Kit</td>
-                                            <td>5</td>
-                                            <td>$399.95</td>
-                                            <td>$200.00</td>
-                                            <td class="profit">+$199.95</td>
-                                            <td class="profit">50%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Marketing Services</td>
-                                            <td>2</td>
-                                            <td>$150.00</td>
-                                            <td>$200.00</td>
-                                            <td class="loss">-$50.00</td>
-                                            <td class="loss">-33%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-4">
-            <h2 class="section-title">Contact Information</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title"><i class="bi bi-envelope-fill text-primary"></i> Email Me</h4>
-                            <p class="card-text">
-                                <a href="mailto:benjaminmasero12@gmail.com" class="text-decoration-none">
-                                    benjaminmasero12@gmail.com
-                                </a>
-                            </p>
-                            <a href="mailto:benjaminmasero12@gmail.com" class="btn btn-primary">
-                                <i class="bi bi-envelope me-1"></i> Send Message
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title"><i class="bi bi-telephone-fill text-primary"></i> Call Me</h4>
-                            <p class="card-text">+255 693490966</p>
-                            <a href="tel:+255693490966" class="btn btn-outline-primary">
-                                <i class="bi bi-telephone me-1"></i> Call Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Add Product Modal -->
-    <div class="modal fade" id="addProductModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add New Product</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Product Name</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Description</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Price</label>
-                            <input type="number" class="form-control" step="0.01" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Quantity</label>
-                            <input type="number" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Category</label>
-                            <select class="form-select">
-                                <option>Digital Product</option>
-                                <option>Service</option>
-                                <option>Physical Product</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Product Image</label>
-                            <input type="file" class="form-control">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Add Product</button>
-                </div>
+            <div class="hero-image">
+                <img src="images/hero-bg.jpg" alt="Benjamin Masero's Work">
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer py-4">
+    <section class="about-preview">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 BrighterBen. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="social-icons">
-                        <a href="#"><i class="bi bi-github"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
+            <div class="about-image">
+                <img src="images/benjamin-portrait.jpg" alt="Benjamin Masero">
+            </div>
+            <div class="about-content">
+                <h2>About Benjamin</h2>
+                <p>With over 8 years of experience in the digital design space, I've helped startups and established brands create compelling visual identities and user experiences.</p>
+                <p>My approach combines aesthetic sensibility with data-driven insights to deliver designs that are both beautiful and effective.</p>
+                <ul class="skills-list">
+                    <li>UI/UX Design</li>
+                    <li>Brand Identity</li>
+                    <li>Creative Direction</li>
+                    <li>Web Development</li>
+                </ul>
+                <a href="about.html" class="btn btn-outline">Learn More About Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-work">
+        <div class="container">
+            <h2>Featured Work</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <img src="images/portfolio/project1.jpg" alt="Project 1">
+                    <div class="work-overlay">
+                        <h3>Lumina Brand Identity</h3>
+                        <a href="portfolio-item.html" class="btn btn-small">View Project</a>
                     </div>
+                </div>
+                <!-- More work items -->
+            </div>
+            <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="images/logo.svg" alt="Benjamin Masero Logo">
+                    <p>Creating digital experiences that inspire and engage.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Get In Touch</h3>
+                    <p>hello@benjaminmasero.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Benjamin Masero. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
+/* Global Styles */
+:root {
+    --primary: #0A2463;
+    --secondary: #3E92CC;
+    --accent: #FF715B;
+    --light: #F8F8F8;
+    --dark: #1E1E24;
+    --gray: #D9D9D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+    border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--accent);
+}
+
+.social-nav a {
+    color: var(--primary);
+    margin-left: 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-nav a:hover {
+    color: var(--accent);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    padding: 150px 0 100px;
+    background-color: var(--light);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* About Preview Section */
+.about-preview {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.about-preview .container {
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 30px 0;
+}
+
+.skills-list li {
+    background-color: var(--light);
+    padding: 8px 15px;
+    margin: 0 10px 10px 0;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Featured Work Section */
+.featured-work {
+    padding: 100px 0;
+    background-color: var(--light);
+    text-align: center;
+}
+
+.featured-work h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 50px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.work-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-10px);
+}
+
+.work-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(10, 36, 99, 0.9), transparent);
+    padding: 30px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.work-item:hover .work-overlay {
+    opacity: 1;
+}
+
+.work-overlay h3 {
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-about img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    opacity: 0.8;
+}
+
+.footer-links h3, .footer-contact h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-contact p {
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.footer-social a {
+    color: white;
+    margin-left: 15px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 1;
+}
+/* Tablet Styles */
+@media (max-width: 992px) {
+    .hero .container, .about-preview .container {
+        flex-direction: column;
+    }
+    
+    .hero-content, .about-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .about-image {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+    
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .main-nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 80px);
+        background-color: white;
+        flex-direction: column;
+        padding: 30px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+    }
+    
+    .main-nav.active {
+        left: 0;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+    
+    .main-nav li {
+        margin: 15px 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .social-nav {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-social {
+        margin-top: 20px;
+    }
+}
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    
+    mobileMenuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+    
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (mainNav.classList.contains('active')) {
+                    mobileMenuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                }
+            }
+        });
+    });
+    
+    // Sticky Header on Scroll
+    const header = document.querySelector('.header');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            header.classList.remove('scroll-up');
+        }
+        
+        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+            header.classList.remove('scroll-up');
+            header.classList.add('scroll-down');
+        }
+        
+        if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+            header.classList.remove('scroll-down');
+            header.classList.add('scroll-up');
+        }
+        
+        lastScroll = currentScroll;
+    });
+    
+    // Add active class to current page in navigation
+    const currentPage = location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        
+        if (currentPage === '' && linkHref === 'index.html') {
+            link.classList.add('active');
+        } else if (linkHref === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+            # Benjamin Masero - Personal Website
+
+![Website Preview](images/preview.jpg)
+
+This is the official website for Benjamin Masero, showcasing his portfolio, services, and professional information.
+
+## Features
+
+- Responsive design (mobile, tablet, desktop)
+- Modern, clean aesthetic
+- Portfolio showcase with filtering
+- Contact form functionality
+- Blog/Thoughts section
+- SEO optimized
+
+## Technologies Used
+
+- HTML5
+- CSS3 (with CSS variables)
+- JavaScript (ES6)
+- Font Awesome icons
+- Google Fonts
+
+## Setup Instructions
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/benjamin-masero-website.git
+   ```
+
+2. Open the project folder:
+   ```bash
+   cd benjamin-masero-website
+   ```
+
+3. Open `index.html` in your browser to view the website locally.
+
+## Deployment
+
+This website can be deployed to any static hosting service:
+- GitHub Pages
+- Netlify
+- Vercel
+- Firebase Hosting
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or inquiries, please contact hello@benjaminmasero.com
